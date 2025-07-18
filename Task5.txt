@@ -1,0 +1,16 @@
+Initialize a Git Repository
+
+cd C:\Task\Synoris\practicalTask
+git init
+
+Add All Files using command:
+git add .
+
+Commit Your Changes:
+git commit -m "first commit"
+
+
+Add the Remote and Push:
+git branch -M main
+git remote add origin https://github.com/gor-purvang/Practical-Task.git
+git push -u origin main
