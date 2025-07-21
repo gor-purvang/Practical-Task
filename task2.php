@@ -1,21 +1,16 @@
 <?php
-// Input number
+
 $n = 6;
 
-// Calculate factorial
 function factorial($num) {
-    $result = 1;
-    for ($i = 2; $i <= $num; $i++) {
-        $result *= $i;
-    }
-    return $result;
+    return array_product(range(1, $num));
 }
 
-// Find all divisors and sum them
 function sumOfDivisors($number) {
     $sum = 0;
-    for ($i = 1; $i <= sqrt($number); $i++) {
-        if ($number % $i == 0) {
+    $sqrt = (int)sqrt($number);
+    for ($i = 1; $i <= $sqrt; $i++) {
+        if ($number % $i === 0) {
             $sum += $i;
             $other = $number / $i;
             if ($other != $i) {

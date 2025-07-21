@@ -14,10 +14,10 @@ This repository contains solutions for four PHP practical tasks.
 You can run each task using the PHP CLI:
 
 ```sh
-php app/Http/Controllers/Api/practicalTask/task1.php
-php app/Http/Controllers/Api/practicalTask/task2.php
-php app/Http/Controllers/Api/practicalTask/task3.php
-php app/Http/Controllers/Api/practicalTask/task4.php
+php path-to-file/task1.php
+php path-to-file/task2.php
+php path-to-file/task3.php
+php path-to-file/task4.php
 ```
 
 ## Deployment

@@ -1,5 +1,5 @@
 <?php
-// Example matrix
+
 $matrix = [
     [1, 5, 8],
     [2, 3, 4],
@@ -10,28 +10,25 @@ $matrix = [
 $columnSums = [];
 $colCount = count($matrix[0]);
 $rowCount = count($matrix);
+
 for ($col = 0; $col < $colCount; $col++) {
     $sum = 0;
     for ($row = 0; $row < $rowCount; $row++) {
         $sum += $matrix[$row][$col];
     }
-    $columnSums[] = $sum;
+    $columnSums[$col] = $sum;
 }
 
-// Calculate multiplication of each row
+// Calculate product of each row
 $rowProducts = [];
-foreach ($matrix as $row) {
-    $product = 1;
-    foreach ($row as $value) {
-        $product *= $value;
-    }
-    $rowProducts[] = $product;
+foreach ($matrix as $i => $row) {
+    $rowProducts[$i] = array_product($row);
 }
 
-// Output results in the specified format
-for ($i = 0; $i < $colCount; $i++) {
-    echo "Sum of column $i: {$columnSums[$i]}\n";
+// Output results
+foreach ($columnSums as $i => $sum) {
+    echo "Sum of column $i: $sum\n";
 }
-for ($i = 0; $i < $rowCount; $i++) {
-    echo "Multiplication of row $i: {$rowProducts[$i]}\n";
+foreach ($rowProducts as $i => $product) {
+    echo "Product of row $i: $product\n";
 }
